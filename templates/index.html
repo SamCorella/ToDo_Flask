@@ -5,5 +5,14 @@
     </head>
     <body>
         <h1>To Do List</h1>
+        <form method="POST">
+            <label>Enter a Task:</label>
+            <input type="text" name="task">
+            <input type="submit" value="Submit">
+        </form>
+
+        {% for task in tasks %}
+            <p>{{task}}</p>
+        {% endfor %}
     </body>
 </html>
