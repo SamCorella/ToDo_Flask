@@ -11,8 +11,10 @@
             <input type="submit" value="Submit">
         </form>
 
+        <ul>
         {% for task in tasks %}
-            <p>{{task}}</p>
+            <li>{{task}} <a href=delete/{{loop.index0}}>X</a>
         {% endfor %}
+        </ul>
     </body>
 </html>

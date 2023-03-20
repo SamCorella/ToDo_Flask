@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 tasks = []
@@ -10,3 +10,10 @@ def todo():
         tasks.append(task)
     return render_template('index.html', tasks = tasks)
 
+@app.route('/delete/<int:index>')
+def delete(index):
+    tasks.pop(index)
+    return redirect(url_for('todo'))
+
+if __name__ == "__main__":
+    app.run(debug=True)
