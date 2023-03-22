@@ -15,5 +15,9 @@ def delete(index):
     tasks.pop(index)
     return redirect(url_for('todo'))
 
+@app.route('/edit/<int:index>')
+def edit(index):
+    pass
+
 if __name__ == "__main__":
     app.run(debug=True)

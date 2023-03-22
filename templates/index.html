@@ -13,7 +13,11 @@
 
         <ul>
         {% for task in tasks %}
-            <li>{{task}} <button onclick="location.href='delete/{{loop.index0}}';">Delete</button></li>
+            <li>
+                {{task}} 
+                <button>Edit</button>
+                <button onclick="location.href='delete/{{loop.index0}}';">Delete</button>
+            </li>
         {% endfor %}
         </ul>
     </body>
