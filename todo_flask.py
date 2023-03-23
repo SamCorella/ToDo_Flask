@@ -15,9 +15,12 @@ def delete(index):
     tasks.pop(index)
     return redirect(url_for('todo'))
 
-@app.route('/edit/<int:index>')
+@app.route('/edit/<int:index>', methods=['GET', 'POST'])
 def edit(index):
-    pass
+    if request.method == 'POST':
+        tasks[index] = request.form['task']
+        return redirect(url_for('todo'))
+    return render_template('edit.html', task=tasks[index]) 
 
 if __name__ == "__main__":
     app.run(debug=True)

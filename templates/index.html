@@ -1,24 +1,20 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>To Do List</title>
-    </head>
-    <body>
-        <h1>To Do List</h1>
-        <form method="POST">
-            <label>Enter a Task:</label>
-            <input type="text" name="task">
-            <input type="submit" value="Submit">
-        </form>
+{% extends "base.html" %}
+{% block title %}To Do List{% endblock %}
+{% block content %}
+<h1>To Do List</h1>
+<form method="POST">
+    <label>Enter a Task:</label>
+    <input type="text" name="task">
+    <input type="submit" value="Submit">
+</form>
 
-        <ul>
-        {% for task in tasks %}
-            <li>
-                {{task}} 
-                <button>Edit</button>
-                <button onclick="location.href='delete/{{loop.index0}}';">Delete</button>
-            </li>
-        {% endfor %}
-        </ul>
-    </body>
-</html>
+<ul>
+{% for task in tasks %}
+    <li>
+        {{task}} 
+        <button onclick="location.href='edit/{{loop.index0}}';">Edit</button>
+        <button onclick="location.href='delete/{{loop.index0}}';">Delete</button>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}

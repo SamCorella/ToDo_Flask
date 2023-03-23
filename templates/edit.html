@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Edit Task{% endblock %}
+{% block content %}
+<h1>Editing Task:</h1>
+<form method="POST">
+    <input type="text" name="task" value="{{task}}"> 
+    <input type="submit" value="Confirm">
+</form>
+{% endblock %}
