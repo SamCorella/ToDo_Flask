@@ -1,12 +1,13 @@
 body {
-    background-color:slateblue;
+    background-color:rebeccapurple;
     color: white;
 }
 
 .container {
     display: flex;
-    background-color: blueviolet;
-    border-radius: 25px;
-    padding: 10px;
+    background-color: slateblue;
+    border-radius: 15px;
+    padding: 20px;
     margin: 10px;
+    gap: 8px;
 }
