@@ -10,7 +10,7 @@
 
 <ul>
 {% for task in tasks %}
-    <li>
+    <li class="container">
         {{task}} 
         <button onclick="location.href='edit/{{loop.index0}}';">Edit</button>
         <button onclick="location.href='delete/{{loop.index0}}';">Delete</button>
