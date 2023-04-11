@@ -8,13 +8,15 @@
     <input type="submit" value="Submit">
 </form>
 
-<ul>
 {% for task in tasks %}
-    <li class="container">
-        {{task}} 
-        <button onclick="location.href='edit/{{loop.index0}}';">Edit</button>
-        <button onclick="location.href='delete/{{loop.index0}}';">Delete</button>
-    </li>
+<div class="container">
+<p class="task">
+    <button id="dropdown">+</button>
+    {{task}} 
+    <button onclick="location.href='edit/{{loop.index0}}';">Edit</button>
+    <button onclick="location.href='delete/{{loop.index0}}';">Delete</button> 
+</p>
+<div class="panel"><p>Lorem ipsum</p></div>
+</div>
 {% endfor %}
-</ul>
 {% endblock %}
